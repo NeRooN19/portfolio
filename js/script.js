@@ -19,6 +19,9 @@ function changeTheme() {
     document.documentElement.style.setProperty("--border-color-1", "#fff");
     document.documentElement.style.setProperty("--arrow-bk-color", "#c2c2c2");
     document.documentElement.style.setProperty("--arrow-color", "#505050");
+    document.querySelector(".moon").classList.toggle("hide-dark");
+    document.querySelector(".sun").classList.toggle("hide-dark");
+
   } else {
     document.documentElement.style.setProperty(
       "--background-color-1",
@@ -37,6 +40,8 @@ function changeTheme() {
     document.documentElement.style.setProperty("--border-color-1", "#000");
     document.documentElement.style.setProperty("--arrow-bk-color", "#505050");
     document.documentElement.style.setProperty("--arrow-color", "#fff");
+    document.querySelector(".sun").classList.toggle("hide-dark");
+    document.querySelector(".moon").classList.toggle("hide-dark");
   }
 }
 
@@ -45,8 +50,10 @@ function load() {
 
   if (!darkmode) {
     store("false");
+    document.querySelector(".moon").classList.add("hide-dark");
   } else if (darkmode == "true") {
     body.classList.add("darkmode");
+    document.querySelector(".sun").classList.add("hide-dark");
   }
   changeTheme();
 }
