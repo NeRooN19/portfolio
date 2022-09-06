@@ -148,9 +148,7 @@ li a:hover {
   background-color: var(--bttn-color-2);
 }
 
-.arrow {
-  display: none;
-}
+
 
 .go-top-button {
   position: fixed;
