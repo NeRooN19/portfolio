@@ -148,8 +148,6 @@ li a:hover {
   background-color: var(--bttn-color-2);
 }
 
-
-
 .go-top-button {
   position: fixed;
   right: 0;
@@ -208,5 +206,15 @@ li a:hover {
 
   a {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 435px) {
+  html {
+    font-size: 10px;
+  }
+
+  .menu a {
+    display: none;
   }
 }
