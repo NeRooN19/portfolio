@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
+
+:root {
+  --background-color-1: #e7e7e7;
+  --background-color-2: #c9c9c9;
+  --background-color-3: #9c9c9c;
+  --background-bttn-1: cornflowerblue;
+  --title-color-1: #000;
+  --menu-color-1: #fff;
+  --text-color-1: #686868;
+  --bttn-color-1: cornflowerblue;
+  --bttn-color-2: rgb(215, 82, 255);
+  --border-color-1: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+#start {
+  height: 100vh;
+  background-color: var(--background-color-1);
+}
+
+.header {
+  height: 3em;
+  top: 0;
+  background-color: black;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+#dark {
+  margin-left: 1em;
+  background-color: white;
+  height: 1em;
+  width: 1em;
+  justify-self: center;
+  align-self: center;
+  transition: 0.5s;
+}
+
+#dark:active {
+  background-color: red;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu li {
+  color: var(--menu-color-1);
+  list-style: none;
+  margin: 0em 2em;
+  font-weight: 700;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+li a:visited {
+  text-decoration: none;
+  color: var(--menu-color-1);
+}
+
+li a:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.welcome {
+  letter-spacing: 0.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: var(--title-color-1);
+}
+
+.title {
+  color: var(--title-color-1);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.title span {
+  justify-self: center;
+  color: cornflowerblue;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.description {
+  color: var(--title-color-1);
+}
+
+.bttn-portfolio,
+.bttn-portfolio:visited {
+  margin-top: 2em;
+  border: solid var(--border-color-1) 0.2em;
+  width: 10em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bttn-color-1);
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: var(--border-color-1);
+  transition: 0.5s;
+}
+
+.bttn-portfolio:hover {
+  background-color: var(--bttn-color-2);
+}
+
+.arrow {
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 1em;
+  width: 1em;
+  background-color: var(--border-color-1);
+  z-index: 100;
+  position: fixed;
+  margin-right: 2em;
+  margin-top: 55em;
+}
+
+#aboutme {
+  height: 100vh;
+  background-color: var(--background-color-2);
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    height: 4em;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+}
