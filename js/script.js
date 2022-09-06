@@ -17,6 +17,8 @@ function changeTheme() {
     document.documentElement.style.setProperty("--text-color-1", "#fff");
     document.documentElement.style.setProperty("--title-color-1", "#fff");
     document.documentElement.style.setProperty("--border-color-1", "#fff");
+    document.documentElement.style.setProperty("--arrow-bk-color", "#c2c2c2");
+    document.documentElement.style.setProperty("--arrow-color", "#505050");
   } else {
     document.documentElement.style.setProperty(
       "--background-color-1",
@@ -33,6 +35,8 @@ function changeTheme() {
     document.documentElement.style.setProperty("--text-color-1", "#686868");
     document.documentElement.style.setProperty("--title-color-1", "#000");
     document.documentElement.style.setProperty("--border-color-1", "#000");
+    document.documentElement.style.setProperty("--arrow-bk-color", "#505050");
+    document.documentElement.style.setProperty("--arrow-color", "#fff");
   }
 }
 

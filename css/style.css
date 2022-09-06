@@ -9,12 +9,14 @@
   --menu-color-1: #fff;
   --text-color-1: #686868;
   --bttn-color-1: cornflowerblue;
-  --bttn-color-2: rgb(215, 82, 255);
   --border-color-1: #000;
+  --arrow-bk-color: #686868;
+  --arrow-color: #fff;
 }
 
 * {
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 html {
@@ -71,8 +73,7 @@ body {
   font-weight: 700;
 }
 
-.menu a {
-  color: var(--menu-color-1);
+a {
   font-size: 1rem;
   text-decoration: none;
 }
@@ -93,6 +94,14 @@ li a:hover {
   align-items: center;
   justify-content: center;
   height: 100%;
+  flex-wrap: wrap;
+  margin: 0.5em;
+}
+
+.text h1,
+.text h2,
+.text p {
+  text-align: center;
 }
 
 .welcome {
@@ -140,15 +149,38 @@ li a:hover {
 }
 
 .arrow {
-  align-self: flex-end;
-  justify-self: flex-end;
-  height: 1em;
-  width: 1em;
-  background-color: var(--border-color-1);
-  z-index: 100;
+  display: none;
+}
+
+.go-top-button {
   position: fixed;
-  margin-right: 2em;
-  margin-top: 55em;
+  right: 0;
+  margin-right: 1.5em;
+  bottom: 2em;
+  padding: 0.7em;
+  background-color: var(--arrow-bk-color);
+  border-radius: 50px;
+  transition: 0.5s;
+  animation: arrow-move infinite 1s;
+}
+.boton-subir:hover {
+  background-color: cornflowerblue;
+}
+
+.arrow {
+  color: var(--arrow-color);
+}
+
+@keyframes arrow-move {
+  0% {
+    bottom: 1.5em;
+  }
+  50% {
+    bottom: 2em;
+  }
+  100% {
+    bottom: 1.5em;
+  }
 }
 
 #aboutme {
