@@ -17,6 +17,7 @@
 * {
   box-sizing: border-box;
   flex-wrap: wrap;
+  font-family: 'Roboto';
 }
 
 html {
