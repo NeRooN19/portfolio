@@ -1,11 +1,1 @@
-$(document).ready(function () {
-  $(".arrow").hide();
-  $(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y < 80) {
-      $(".arrow").fadeOut("fast");
-    } else {
-      $(".arrow").fadeIn("fast");
-    }
-  });
-});
+$(document).ready(function(){$(".arrow").hide(),$(document).scroll(function(){var o=$(this).scrollTop();o<80?$(".arrow").fadeOut("fast"):$(".arrow").fadeIn("fast")})});
