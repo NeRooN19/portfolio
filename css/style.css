@@ -209,7 +209,7 @@ li a:hover {
 
 @media (max-width: 700px) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   body {
@@ -219,6 +219,8 @@ li a:hover {
 
   .header {
     height: 4em;
+    display: flex;
+    align-items: center;
   }
 
   li {
@@ -232,7 +234,7 @@ li a:hover {
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 475px) {
   html {
     font-size: 10px;
   }
@@ -269,6 +271,10 @@ li a:hover {
   
   .active .menu{
     padding: 0;
+  }
+
+  .text{
+    font-size: 14px;
   }
 
 }
