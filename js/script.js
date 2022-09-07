@@ -21,6 +21,7 @@ function changeTheme() {
     document.documentElement.style.setProperty("--arrow-color", "#505050");
     document.querySelector(".moon").classList.add("hide-dark");
     document.querySelector(".sun").classList.remove("hide-dark");
+    document.documentElement.style.setProperty("--border-color-2", "#e7e7e7");
   } else {
     document.documentElement.style.setProperty(
       "--background-color-1",
@@ -41,6 +42,7 @@ function changeTheme() {
     document.documentElement.style.setProperty("--arrow-color", "#fff");
     document.querySelector(".sun").classList.add("hide-dark");
     document.querySelector(".moon").classList.remove("hide-dark");
+    document.documentElement.style.setProperty("--border-color-2", "#777");
   }
 }
 
