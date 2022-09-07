@@ -79,17 +79,6 @@ function scroll() {
   });
 }
 
-function displayMenu() {
-  const header = document.querySelector(".header");
-  const btn = document.querySelector(".dark-button");
-  if (header.className === "header") {
-    header.classList.add("active");
-    btn.classList.add("active");
-  } else {
-    header.classList.remove("active");
-    btn.classList.remove("active");
-  }
-}
 
 document.addEventListener("click", function hideOnClick(event) {
   const header = document.querySelector(".header");

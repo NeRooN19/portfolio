@@ -12,6 +12,21 @@
     <script type="text/javascript" src="js/scroll.js"></script>
     <link rel="icon" type="image/x-icon" href="icon/android-chrome-512x512.png">
 
+    <script>
+
+        function displayMenu() {
+            const header = document.querySelector(".header");
+            const btn = document.querySelector(".dark-button");
+            if (header.className === "header") {
+                header.classList.add("active");
+                btn.classList.add("active");
+            } else {
+                header.classList.remove("active");
+                btn.classList.remove("active");
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -37,7 +52,7 @@
                     <li><a>Contactar</a></li>
                 </ul>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick=displayMenu() >
+            <a href="javascript:void(0);" class="icon" onclick=displayMenu()>
                 <i class="fa fa-bars"></i>
             </a>
         </header>
