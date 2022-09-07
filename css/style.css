@@ -35,6 +35,7 @@ body {
 #start {
   height: 100vh;
   background-color: var(--background-color-1);
+  user-select: none;
 }
 
 .header {
