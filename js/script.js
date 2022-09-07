@@ -21,7 +21,6 @@ function changeTheme() {
     document.documentElement.style.setProperty("--arrow-color", "#505050");
     document.querySelector(".moon").classList.add("hide-dark");
     document.querySelector(".sun").classList.remove("hide-dark");
-
   } else {
     document.documentElement.style.setProperty(
       "--background-color-1",
@@ -79,3 +78,25 @@ function scroll() {
     behavior: "smooth",
   });
 }
+
+function displayMenu() {
+  const header = document.querySelector(".header");
+  const btn = document.querySelector(".dark-button");
+  if (header.className === "header") {
+    header.classList.add("active");
+    btn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    btn.classList.remove("active");
+  }
+}
+
+document.addEventListener("click", function hideOnClick(event) {
+  const header = document.querySelector(".header");
+  const btn = document.querySelector(".dark-button");
+
+  if (!header.contains(event.target)) {
+    header.classList.remove("active");
+    btn.classList.remove("active");
+  }
+});
