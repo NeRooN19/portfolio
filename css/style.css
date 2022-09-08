@@ -213,9 +213,11 @@ a:hover {
   align-items: center;
   justify-content: space-around;
   height: 100%;
+  width: 100%;
   flex-wrap: wrap;
   margin: 1em;
 }
+
 .aboutme__picture {
   height: 35em;
   width: 26em;
@@ -291,24 +293,8 @@ a:hover {
   margin-top: 1em;
 }
 
-@media screen and (max-width: 1350px) {
-  .aboutme__card {
-    margin-top: 3em;
-    margin-bottom: 0em;
-  }
 
-  .aboutme__picture,
-  .aboutme__flip-card,
-  .aboutme__flip-card-back,
-  .aboutme__flip-card-front,
-  .aboutme__flip-card,
-  .aboutme__flip-card-inner {
-    width: 22em;
-    height: 30em;
-  }
-}
-
-@media screen and (max-width: 1286px) {
+@media screen and (max-width: 1318px) {
   .aboutme__card {
     margin-top: 3em;
     margin-bottom: 0em;
