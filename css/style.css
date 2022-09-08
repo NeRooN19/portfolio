@@ -311,11 +311,8 @@ a:hover {
   }
 
   .aboutme__card {
-    display: flex;
+
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: center;
     justify-content: center;
   }
 
@@ -356,17 +353,6 @@ a:hover {
     font-size: 1.5rem;
   }
 
-  .aboutme__card {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
   .aboutme__picture,
   .aboutme__flip-card,
   .aboutme__flip-card-back,
@@ -378,12 +364,7 @@ a:hover {
   }
 
   .aboutme__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: 1rem;
-    margin-bottom: 2em;
   }
 
   .aboutme__title-2,
