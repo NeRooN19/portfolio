@@ -1,1 +1,76 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pablo Rico</title><link rel="stylesheet" href="css/style.css"><script src="https://kit.fontawesome.com/e403615684.js" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="js/scroll.js"></script><link rel="icon" type="image/x-icon" href="img/android-chrome-512x512.png"><script>function displayMenu() {const header = document.querySelector(".header");            const btn = document.querySelector(".dark-button");            if (header.className === "header") {                header.classList.add("active");                btn.classList.add("active");            } else {                header.classList.remove("active");                btn.classList.remove("active");            }        }</script></head><body class="darkmode"><label class="arrow"><a href="#start" title="subir" class="go-top-button"><i class="fa-solid fa-arrow-up arrow"></i></a></label><section id="start"><header class="header"><div id="dark" class="dark-button"><i class="fa-solid fa-sun fa-2x sun"></i> <i class="fa-solid fa-moon fa-2x moon"></i></div><div><ul class="menu"><li><a href="#start" onclick="displayMenu()">Inicio</a></li><li><a href="#aboutme" onclick="displayMenu()">Sobre mi</a></li><li><a onclick="displayMenu()">Portfolio</a></li><li><a onclick="displayMenu()">Contactar</a></li></ul></div><a href="javascript:void(0);" class="icon" onclick="displayMenu()"><i class="fa fa-bars"></i></a></header><div class="text"><h1 class="welcome">Bienvenid@</h1><h2 class="title">Soy <span>Pablo Rico, </span>desarrollador multiplataforma</h2><p class="description">En esta web podrás encontrar mis trabajos así como información sobre mí</p><a class="bttn-portfolio" href="#portfolio">Ir a portfolio</a></div></section><section id="aboutme"><div class="all-about-me"><div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="img/profile.jpg" alt="Pablo Rico" class="picture"></div><div class="flip-card-back"><h1>Pablo Rico García</h1><p>Trabajo en equipo</p><p>Buen aprendizaje</p><p>Perseverancia</p><p>Resolutivo</p></div></div></div><div class="aboutme-text"><h2 class="title-2">Sobre mí</h2><p>Cursé un Grado Superior de Desarrollo Multiplataforma en el Institut Obert de Catalunya con una media superior al 9.</p><p>Ahí aprendí Java, PostgreSQL, Linux y Odoo.</p><p>Por mi cuenta adquirí los conocimientos de HTML, CSS y JavaScript para realizar esta web.</p><a href="data/CV_Pablo_Rico_Garcia.pdf" download="Pablo_Rico_Garcia_CV" target="_blank" class="download">Descargar CV</a></div></div></section><script type="text/javascript" src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pablo Rico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e403615684.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/android-chrome-512x512.png">
+    <script>function displayMenu() { const header = document.querySelector(".header"); const btn = document.querySelector(".dark-button"); if (header.className === "header") { header.classList.add("active"); btn.classList.add("active"); } else { header.classList.remove("active"); btn.classList.remove("active"); } }</script>
+</head>
+
+<body class="darkmode"><label class="arrow"><a href="#start" title="subir" class="go-top-button"><i
+                class="fa-solid fa-arrow-up arrow"></i></a></label>
+    <section id="start" class="start">
+        <header class="header">
+            <div id="dark" class="dark-button">
+                <i class="fa-solid fa-sun fa-2x dark-button__sun"> </i>
+                <i class="fa-solid fa-moon fa-2x dark-button__moon"> </i>
+            </div>
+            <div>
+                <ul class="header__menu">
+                    <li class="header__li"><a class="header__a" href="#start" onclick="displayMenu()">Inicio</a></li>
+                    <li class="header__li"><a class="header__a" href="#aboutme" onclick="displayMenu()">Sobre mi</a>
+                    </li>
+                    <li class="header__li"><a class="header__a" onclick="displayMenu()">Portfolio</a></li>
+                    <li class="header__li"><a class="header__a" onclick="displayMenu()">Contactar</a></li>
+                </ul>
+            </div><a href="javascript:void(0);" class="header__icon" onclick="displayMenu()"><i
+                    class="fa fa-bars"></i></a>
+        </header>
+        <div class="start__text text">
+            <h1 class="start__welcome title">Bienvenid@</h1>
+            <h2 class="title-2 start__title">Soy <span>Pablo Rico, </span>desarrollador multiplataforma</h2>
+            <p class="start__description simple-text">En esta web podrás encontrar mis trabajos así como información
+                sobre mí</p>
+            <a class="bttn start__bttn" href="#portfolio">Ir a portfolio</a>
+        </div>
+    </section>
+    <section id="aboutme" class="aboutme">
+        <div class="aboutme__card">
+            <div class="aboutme__flip-card">
+                <div class="aboutme__flip-card-inner">
+                    <div class="aboutme__flip-card-front">
+                        <img src="img/profile.jpg" alt="Pablo Rico" class="aboutme__picture">
+                    </div>
+                    <div class="aboutme__flip-card-back">
+                        <h1>Pablo Rico García</h1>
+                        <p>Trabajo en equipo</p>
+                        <p>Buen aprendizaje</p>
+                        <p>Perseverancia</p>
+                        <p>Resolutivo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutme__text">
+                <h2 class="aboutme__title title-2">Sobre mí</h2>
+                <p class="simple-text">Cursé un Grado Superior de Desarrollo Multiplataforma en el Institut Obert de
+                    Catalunya con una media
+                    superior al 9.</p>
+                <p class="simple-text">Ahí aprendí Java, PostgreSQL, Linux y Odoo.</p>
+                <p class="simple-text">Por mi cuenta adquirí los conocimientos de HTML, CSS y JavaScript para realizar
+                    esta web.</p>
+                <a href="data/CV_Pablo_Rico_Garcia.pdf" download="Pablo_Rico_Garcia_CV" target="_blank"
+                    class="aboutme__download bttn">Descargar CV</a>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

@@ -13,7 +13,6 @@
   --arrow-bk-color: #686868;
   --arrow-color: #fff;
   --border-color-2: #e7e7e7;
-  --bttn-color-2: #1871d8;
 }
 * {
   box-sizing: border-box;
@@ -30,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.start {
+#start {
   height: 100vh;
   background-color: var(--background-color-1);
   user-select: none;
@@ -56,13 +55,12 @@ body {
   align-content: center;
   justify-content: center;
 }
-
-.dark-button__sun {
+.sun {
   position: absolute;
   color: #fdfdc2;
   background-color: transparent;
 }
-.dark-button__moon {
+.moon {
   position: absolute;
   color: #fdfdc2;
   background-color: transparent;
@@ -70,39 +68,34 @@ body {
 .hide-dark {
   color: #00000000;
 }
-.header__menu {
+.menu {
   display: flex;
   flex-direction: row;
 }
-
-li {
+.menu li {
   list-style: none;
-}
-
-.header__li {
   margin: 0 2em;
   font-weight: 700;
 }
-
-a,
-a:visited {
+.menu a {
+  color: var(--menu-color-1);
+  font-size: 1rem;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.menu a:visited {
   text-decoration: none;
   color: var(--menu-color-1);
 }
-
-.header__a {
-  font-size: 1rem;
-}
-
-a:hover {
+li a:hover {
   color: #6495ed;
   cursor: pointer;
 }
-
-.header__icon {
+.icon {
   display: none;
 }
-
 .text {
   display: flex;
   flex-direction: column;
@@ -112,45 +105,33 @@ a:hover {
   flex-wrap: wrap;
   margin: 0.5em;
 }
-
-.title,
-.title-2,
-.simple-text {
+.text h1,
+.text h2,
+.text p {
   text-align: center;
 }
-
-.simple-text {
-  color: var(--title-color-1);
-}
-
-.title {
-  color: var(--title-color-1);
+.welcome {
   letter-spacing: 0.5em;
   font-weight: 100;
   text-transform: uppercase;
+  color: var(--title-color-1);
 }
-
-.title-2 {
-  color: var(--title-color-2);
-  text-decoration: underline 0.2em;
-}
-
-.start__title {
+.title {
   color: var(--title-color-1);
   font-weight: 400;
   font-size: 2rem;
-  text-decoration: none;
 }
-
-.start__title span {
+.title span {
   justify-self: center;
   color: #6495ed;
   font-weight: 700;
   font-size: 2.5rem;
 }
-
-.bttn,
-.bttn:hover {
+.description {
+  color: var(--title-color-1);
+}
+.bttn-portfolio,
+.bttn-portfolio:visited {
   margin-top: 2em;
   border: solid var(--border-color-1) 0.2em;
   width: 10em;
@@ -164,11 +145,9 @@ a:hover {
   color: var(--border-color-1);
   transition: 0.5s;
 }
-
-.bttn:hover {
+.bttn-portfolio:hover {
   background-color: var(--bttn-color-2);
 }
-
 .go-top-button {
   position: fixed;
   right: 0;
@@ -180,15 +159,12 @@ a:hover {
   transition: 0.5s;
   animation: arrow-move infinite 1s;
 }
-
 .go-top-button:hover {
   background-color: #6495ed;
 }
-
 .arrow {
   color: var(--arrow-color);
 }
-
 @keyframes arrow-move {
   0% {
     bottom: 1.5em;
@@ -200,13 +176,12 @@ a:hover {
     bottom: 1.5em;
   }
 }
-
-.aboutme {
+#aboutme {
   height: 96vh;
   background-color: var(--background-color-2);
   overflow: hidden;
 }
-.aboutme__card {
+.all-about-me {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -215,40 +190,40 @@ a:hover {
   flex-wrap: wrap;
   margin: 1em;
 }
-.aboutme__picture {
+.picture {
   height: 35em;
   width: 26em;
   border: solid 0.5rem var(--border-color-2);
   border-radius: 25px;
   position: relative;
 }
-.aboutme__flip-card {
+.flip-card {
   background-color: transparent;
   height: 35em;
   width: 26em;
   left: 1em;
   perspective: 1000px;
 }
-.aboutme__flip-card-inner {
+.flip-card-inner {
   position: relative;
   width: 26em;
   height: 35em;
   text-align: center;
-  transition: transform 1s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.aboutme__flip-card-inner:hover {
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-.aboutme__flip-card-back,
-.aboutme__flip-card-front {
+.flip-card-back,
+.flip-card-front {
   position: absolute;
   width: 26em;
   height: 35em;
   border-radius: 25px;
   backface-visibility: hidden;
 }
-.aboutme__flip-card-back {
+.flip-card-back {
   border: solid 0.5rem var(--border-color-2);
   border-radius: 25px;
   display: flex;
@@ -274,45 +249,42 @@ a:hover {
     background-position: 0 50%;
   }
 }
-
-.aboutme h1,
-.aboutme h2,
-.aboutme p {
+.title-2 {
+  color: var(--title-color-2);
+  text-decoration: underline 0.2em;
+}
+.all-about-me h1,
+.all-about-me h2,
+.teall-about-me p {
   text-align: left;
 }
-
-.aboutme__text {
-  align-items: flex-start;
-  font-weight: 700;
+.aboutme-text {
+  display: flex;
+  flex-direction: column;
   margin: 2em;
 }
-
-.aboutme__download,
-.aboutme__download:hover {
+.aboutme-text p {
+  color: var(--text-color-1);
+  font-weight: 700;
+}
+.download {
   margin-top: 1em;
+  border: solid var(--border-color-1) 0.2em;
+  width: 10em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bttn-color-1);
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: var(--border-color-1);
+  transition: 0.5s;
 }
-
-@media screen and (max-width: 1350px) {
-  .aboutme__card {
-    margin-top: 3em;
-    margin-bottom: 0em;
-  }
-
-  .aboutme__picture,
-  .aboutme__flip-card,
-  .aboutme__flip-card-back,
-  .aboutme__flip-card-front,
-  .aboutme__flip-card,
-  .aboutme__flip-card-inner {
-    width: 22em;
-    height: 30em;
-  }
-
-  .aboutme__text {
-
-  }
+.download:visited {
+  color: var(--border-color-1);
+  text-decoration: none;
 }
-
 @media screen and (max-width: 700px) {
   html {
     font-size: 13px;
@@ -339,10 +311,10 @@ a:hover {
   html {
     font-size: 10px;
   }
-  .header__a {
+  .menu a {
     display: none;
   }
-  .header__icon {
+  .icon {
     align-self: flex-end;
     margin-right: 1.5em;
     margin-bottom: 0.7em;
@@ -359,12 +331,12 @@ a:hover {
     align-self: flex-start;
     display: block;
   }
-  .active .header__a {
+  .active a {
     display: flex;
     padding: 0;
     font-size: 1.3rem;
   }
-  .active .header__menu {
+  .active .menu {
     padding: 0;
   }
   .text {
